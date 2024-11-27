@@ -1,0 +1,40 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+
+const services = [
+  {
+    title: "Process Optimization",
+    description: "Streamline your business processes from lead generation to revenue realization."
+  },
+  {
+    title: "System Integration",
+    description: "Seamlessly connect your marketing, sales, operations, and finance systems."
+  },
+  {
+    title: "Workflow Automation",
+    description: "Automate manual processes to improve efficiency and reduce errors."
+  },
+  {
+    title: "Performance Analytics",
+    description: "Implement metrics and KPIs to track and improve operational excellence."
+  }
+];
+---
+
+<Layout title="Services - Lead2Cash">
+  <Header />
+  <main class="py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h1 class="text-4xl font-bold text-gray-900 mb-8">Our Services</h1>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        {services.map(service => (
+          <div class="bg-white p-6 rounded-lg shadow-md">
+            <h2 class="text-xl font-semibold text-indigo-600 mb-3">{service.title}</h2>
+            <p class="text-gray-600">{service.description}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </main>
+</Layout>

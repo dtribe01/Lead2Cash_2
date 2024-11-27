@@ -1,0 +1,33 @@
+---
+const services = [
+  {
+    title: "Process Optimization",
+    description: "Streamline your business processes from lead generation to revenue realization."
+  },
+  {
+    title: "System Integration",
+    description: "Seamlessly connect your marketing, sales, operations, and finance systems."
+  },
+  {
+    title: "Workflow Automation",
+    description: "Automate manual processes to improve efficiency and reduce errors."
+  },
+  {
+    title: "Performance Analytics",
+    description: "Implement metrics and KPIs to track and improve operational excellence."
+  }
+];
+---
+
+<section id="services" class="py-16 bg-white">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+      {services.map(service => (
+        <div class="bg-gradient-to-br from-white to-indigo-50 p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300">
+          <h3 class="text-xl font-semibold text-indigo-600 mb-3">{service.title}</h3>
+          <p class="text-gray-600">{service.description}</p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

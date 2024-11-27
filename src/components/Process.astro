@@ -1,0 +1,48 @@
+---
+const steps = [
+  {
+    title: "Mobilization Phase",
+    description: "Timeboxed interviews and workshops to understand current and future workflows."
+  },
+  {
+    title: "User Stories",
+    description: "Prioritized user stories describing the desired way of work."
+  },
+  {
+    title: "Process Mapping",
+    description: "Detailed mapping of information flow between key actors and systems."
+  },
+  {
+    title: "Key Metrics",
+    description: "Definition of metrics to track operational excellence."
+  },
+  {
+    title: "System Integration",
+    description: "System mapping and integration planning for seamless operations."
+  }
+];
+---
+<section id="process" class="py-16 bg-gradient-to-br from-white to-indigo-50">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center">
+      <h2 class="text-3xl font-extrabold text-gray-900 sm:text-4xl">
+        Our Process
+      </h2>
+      <p class="mt-4 text-lg text-gray-600">
+        A structured approach to transform your business operations
+      </p>
+    </div>
+    <div class="mt-12">
+      <div class="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
+        {steps.map((step, index) => (
+          <div class="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300">
+            <div class="text-xl font-semibold text-indigo-600 mb-2">
+              {index + 1}. {step.title}
+            </div>
+            <p class="text-gray-600">{step.description}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </div>
+</section>

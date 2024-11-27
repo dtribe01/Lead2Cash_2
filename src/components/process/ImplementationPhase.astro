@@ -1,0 +1,46 @@
+---
+const steps = [
+  {
+    title: "System Integration",
+    description: "Building and implementing required system integrations based on the system map."
+  },
+  {
+    title: "Process Implementation",
+    description: "Rolling out new processes and workflows across departments."
+  },
+  {
+    title: "Training & Support",
+    description: "Providing training and support to ensure smooth adoption of new processes."
+  },
+  {
+    title: "Monitoring & Optimization",
+    description: "Tracking defined KPIs and continuously optimizing processes based on results."
+  }
+];
+---
+<section class="py-16 bg-white">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-12" data-aos="fade-down">
+      <h2 class="text-3xl font-extrabold text-gray-900 sm:text-4xl">
+        Implementation Phase
+      </h2>
+      <p class="mt-4 text-lg text-gray-600">
+        Executing the roadmap to transform your business operations
+      </p>
+    </div>
+    <div class="grid grid-cols-1 gap-8 md:grid-cols-2">
+      {steps.map((step, index) => (
+        <div 
+          class="bg-gradient-to-br from-white to-indigo-50 p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300"
+          data-aos="fade-up"
+          data-aos-delay={index * 150}
+        >
+          <div class="text-xl font-semibold text-indigo-600 mb-2">
+            {index + 1}. {step.title}
+          </div>
+          <p class="text-gray-600">{step.description}</p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

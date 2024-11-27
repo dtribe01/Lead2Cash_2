@@ -1,0 +1,26 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import MobilizationPhase from '../components/process/MobilizationPhase.astro';
+import ImplementationPhase from '../components/process/ImplementationPhase.astro';
+---
+
+<Layout title="Our Process - Lead2Cash">
+  <Header />
+  <main>
+    <div class="bg-indigo-50 py-16">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center">
+          <h1 class="text-4xl font-bold text-gray-900 sm:text-5xl md:text-6xl">
+            Our Process
+          </h1>
+          <p class="mt-3 max-w-md mx-auto text-base text-gray-600 sm:text-lg md:mt-5 md:text-xl md:max-w-3xl">
+            A structured approach to transform your business from lead generation to revenue realization
+          </p>
+        </div>
+      </div>
+    </div>
+    <MobilizationPhase />
+    <ImplementationPhase />
+  </main>
+</Layout>

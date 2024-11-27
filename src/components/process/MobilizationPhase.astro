@@ -1,0 +1,50 @@
+---
+const deliverables = [
+  {
+    title: "User Stories",
+    description: "Prioritized list of user stories describing the desired way of work in the future."
+  },
+  {
+    title: "Process Maps",
+    description: "Detailed mapping of information flow between key actors and systems involved."
+  },
+  {
+    title: "Key Metrics",
+    description: "Framework of metrics to track and achieve operational excellence."
+  },
+  {
+    title: "System Map",
+    description: "Comprehensive mapping of key dependencies and required integrations."
+  },
+  {
+    title: "Implementation Plan",
+    description: "Initial roadmap for implementing changes in manageable increments."
+  }
+];
+---
+<section class="py-16 bg-gradient-to-br from-white to-indigo-50">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-12" data-aos="fade-down">
+      <h2 class="text-3xl font-extrabold text-gray-900 sm:text-4xl">
+        Mobilization Phase
+      </h2>
+      <p class="mt-4 text-lg text-gray-600">
+        A timeboxed discovery phase with interviews and workshops to establish current and future workflows
+      </p>
+    </div>
+    <div class="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
+      {deliverables.map((item, index) => (
+        <div 
+          class="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300"
+          data-aos="fade-up"
+          data-aos-delay={index * 100}
+        >
+          <div class="text-xl font-semibold text-indigo-600 mb-2">
+            {item.title}
+          </div>
+          <p class="text-gray-600">{item.description}</p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
